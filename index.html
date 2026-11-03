@@ -1,13 +1,11 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="color-scheme" content="light"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Victor Fabuluje Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Navy-and-cream, bold: navy hero, Erie pipeline first, ThriftedByVic calculator, resume band, NSBE block, compact projects. */
-:root{--bg:#f7f3ea;--card:#fffdf8;--ink:#0b1b36;--body:#33425c;--muted:#66728a;--line:#e4dccb;--navy:#0b1b36;--navy2:#13294d;--gold:#e8a91c;--gold-d:#8a5f00;--blue:#1f4fb8;--soft:#efe8d8;
+:root{color-scheme:light;--bg:#f7f3ea;--card:#fffdf8;--ink:#0b1b36;--body:#33425c;--muted:#66728a;--line:#e4dccb;--navy:#0b1b36;--navy2:#13294d;--gold:#e8a91c;--gold-d:#8a5f00;--blue:#1f4fb8;--soft:#efe8d8;
 --serif:'Fraunces',Georgia,serif;--sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1427;--card:#101e38;--ink:#f3eee1;--body:#c3cde0;--muted:#8fa0bd;--line:#1e3052;--soft:#14264a;--gold-d:#e8a91c;--blue:#8db4ff;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0a1427;--card:#101e38;--ink:#f3eee1;--body:#c3cde0;--muted:#8fa0bd;--line:#1e3052;--soft:#14264a;--gold-d:#e8a91c;--blue:#8db4ff;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:60}
@@ -27,7 +25,6 @@ h2{font-size:clamp(42px,6.4vw,76px);margin:14px 0 22px}
 .nav ul{display:flex;align-items:center;flex-wrap:wrap;gap:0 4px;margin:0;padding:0;list-style:none}
 .nav ul a{display:block;color:#c9d4ea;text-decoration:none;font-size:14.5px;padding:8px 10px;border-radius:8px}.nav ul a:hover{color:#fff}
 .nav .rs{background:var(--gold);color:var(--navy);font-weight:700;border-radius:999px;padding:8px 16px;margin-left:6px}.nav .rs:hover{color:var(--navy);filter:brightness(1.06)}
-.tgl{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:1px solid #2c4572;background:transparent;color:#fff;cursor:pointer;margin-left:6px}
 /* hero */
 .hero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;position:relative;overflow:hidden;padding-block:clamp(44px,7vw,88px) clamp(70px,9vw,110px)}
 .hero::before{content:"";position:absolute;right:-140px;top:-160px;width:520px;height:520px;border-radius:50%;border:2px solid rgba(232,169,28,.4);box-shadow:0 0 0 40px rgba(232,169,28,.07),0 0 0 80px rgba(232,169,28,.04)}
@@ -56,7 +53,7 @@ h2{font-size:clamp(42px,6.4vw,76px);margin:14px 0 22px}
 /* Erie */
 .erie{padding-top:clamp(48px,7vw,84px)}
 .role{font:500 15px var(--mono);color:var(--muted);margin-bottom:26px}
-.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 0 14px;padding:0;list-style:none}
+.pipe{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 14px;padding:0;list-style:none}
 .pipe button{all:unset;box-sizing:border-box;display:block;width:100%;height:100%;cursor:pointer;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px 14px 16px;transition:border-color .15s,background .15s}
 .pipe button:hover{border-color:var(--gold)}
 .pipe button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
@@ -143,7 +140,7 @@ h2{font-size:clamp(42px,6.4vw,76px);margin:14px 0 22px}
 .mail{font:500 15.5px var(--mono);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:0 18px;height:48px;display:inline-flex;align-items:center;border-radius:999px;user-select:all}
 footer{background:var(--navy);color:#9fb1d0;font-size:13.5px;padding-block:24px;border-top:1px solid #1e3052}footer .in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px}
 @media (prefers-reduced-motion:no-preference){.card,.btn{transition:transform .18s}.card:hover{transform:translateY(-4px)}.btn:hover{transform:translateY(-2px)}.bar s{transition:width .6s ease}}
-@media (max-width:900px){.hero .g,.pts,.erie-grid,.tbv .g,.ng,.cards,.skl,.edu,.path,.res .box{grid-template-columns:1fr}.ph{justify-self:start;order:-1;max-width:300px}.ph figcaption{left:8px}.pipe{grid-template-columns:1fr 1fr}.stats dl{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}.ns{grid-template-columns:1fr 1fr}.ng img{max-width:290px}.spot{max-width:300px}}
+@media (max-width:900px){.hero .g,.pts,.erie-grid,.tbv .g,.ng,.cards,.skl,.edu,.path,.res .box{grid-template-columns:1fr}.ph{justify-self:start;order:-1;max-width:300px}.ph figcaption{left:8px}.pipe{grid-template-columns:1fr}.stats dl{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}.ns{grid-template-columns:1fr 1fr}.ng img{max-width:290px}.spot{max-width:300px}}
 @media (max-width:540px){.pipe{grid-template-columns:1fr}.nav ul a{font-size:14px;padding:6px 7px}.logo span{display:none}}
 </style>
 
@@ -151,7 +148,7 @@ footer{background:var(--navy);color:#9fb1d0;font-size:13.5px;padding-block:24px;
 <a class="logo" href="#top"><i>VF</i><span>Victor Fabuluje</span></a>
 <ul><li><a href="#erie">Erie</a></li><li><a href="#thrift">ThriftedByVic</a></li><li><a href="#nsbe">NSBE</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
 <li><a class="rs" href="#resume" data-resume>Resume</a></li>
-<li><button class="tgl" id="tgl" type="button" aria-label="Switch between light and dark"><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 1.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor"/></svg></button></li></ul>
+</ul>
 </div></header>
 
 <header class="hero" id="top"><div class="in"><div class="g">
@@ -182,14 +179,11 @@ footer{background:var(--navy);color:#9fb1d0;font-size:13.5px;padding-block:24px;
 <li><button type="button" aria-pressed="true" data-i="0"><i>01</i><b>Source systems</b></button></li>
 <li><button type="button" aria-pressed="false" data-i="1"><i>02</i><b>Bronze layer</b></button></li>
 <li><button type="button" aria-pressed="false" data-i="2"><i>03</i><b>My build</b></button></li>
-<li><button type="button" aria-pressed="false" data-i="3"><i>04</i><b>Commercial Lines</b></button></li>
-<li><button type="button" aria-pressed="false" data-i="4"><i>05</i><b>Policy In Force GPT</b></button></li>
 </ol>
 <div class="detail" id="detail" aria-live="polite"></div>
 <div class="erie-grid">
 <ul class="pts">
 <li><b>Engineered 6 Business Auto reporting datasets</b> in SAS from bronze-layer AWS Athena data, integrating legacy and modern policy systems across 185K+ policies, 11.7M+ forms, and 4.7M+ coverage records.</li>
-<li>Delivered them to Commercial Lines and fed them daily into a custom Policy In Force GPT knowledge base.</li>
 <li>Validated the MarkLogic 10-to-12 migration across <b>13 relational views</b>, documenting 14 categories of TDE XML changes and comparing up to 1,000 records across Production and Test, with <b>zero downstream issues</b>.</li>
 <li>Designed source-to-target mappings, ERDs, and data lineage across 4 enterprise data sources.</li>
 <li><b>Co-led an 8-person intern team</b> building a custom Data Governance GPT used by data teams across every department, replacing hours-to-weeks SME requests with instant natural-language answers.</li>
@@ -223,7 +217,7 @@ footer{background:var(--navy);color:#9fb1d0;font-size:13.5px;padding-block:24px;
 </div>
 </div>
 </div>
-<div class="tp"><figure><img src="tbv-rack.jpg" alt="Victor pulling a vintage graphic tee off a rack of vintage tees in a white room" style="object-position:50% 55%" loading="lazy"><figcaption>Pulling vintage tees for the rack.</figcaption></figure><figure><img src="tbv-popup.jpg" alt="Victor and a friend at a pop-up booth with racks of vintage jackets and a table of vintage hats" loading="lazy"><figcaption>Rush Hour Thrifts: a pop-up with Old Skool Finds.</figcaption></figure></div>
+<div class="tp"><figure><img src="tbv-rack.jpg" alt="Victor pulling one of his own vintage tees off a rack of his inventory at a pop-up" style="object-position:50% 55%" loading="lazy"><figcaption>My own pieces, racked for a pop-up.</figcaption></figure><figure><img src="tbv-popup.jpg" alt="Victor and a friend at a pop-up booth with racks of vintage jackets and a table of vintage hats" loading="lazy"><figcaption>Rush Hour Thrifts: a pop-up with Old Skool Finds.</figcaption></figure></div>
 </div></section>
 
 <section class="res" id="resume" style="padding-block:clamp(48px,7vw,84px)"><div class="in"><div class="box">
@@ -300,16 +294,11 @@ sv.addEventListener('click',function(){
    return d.save({filename:'Victor_Fabuluje_Resume.pdf',data:b}).then(function(){note('')},function(err){if(err&&err.code==='declined')return;note('Could not save the PDF here.')})})
  }).catch(function(){note('Could not load the PDF here.')});
 });})();
-(function(){var t=document.getElementById('tgl'),r=document.documentElement;
-try{var s=localStorage.getItem('vf5-theme');if(s==='light'||s==='dark')r.setAttribute('data-theme',s);}catch(e){}
-t.addEventListener('click',function(){var cur=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var n=cur==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('vf5-theme',n);}catch(e){}});})();
 (function(){
 var D=[
 '<b>Source systems.</b> Erie’s legacy and modern policy systems hold the Business Auto data: 185K+ policies, 11.7M+ forms, and 4.7M+ coverage records.',
 '<b>Bronze layer.</b> Raw data lands in AWS Athena, the starting point of the Medallion Architecture. I pulled from bronze to build the datasets.',
-'<b>My build.</b> I wrote 6 Business Auto reporting datasets in SAS, bringing the legacy and modern systems together.',
-'<b>Commercial Lines.</b> The datasets were delivered to Commercial Lines for their business auto reporting.',
-'<b>Policy In Force GPT.</b> The datasets also fed a custom Policy In Force GPT knowledge base, updated daily.'];
+'<b>My build.</b> I wrote 6 Business Auto reporting datasets in SAS, bringing the legacy and modern systems together.'];
 var bs=document.querySelectorAll('.pipe button'),d=document.getElementById('detail');
 function show(i){bs.forEach(function(b,k){b.setAttribute('aria-pressed',k===i?'true':'false')});d.innerHTML=D[i];}
 bs.forEach(function(b,k){b.addEventListener('click',function(){show(k)})});show(0);
